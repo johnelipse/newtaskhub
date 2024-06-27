@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  .webfont{
+    font-family: "Libre Franklin", sans-serif;
+    background-color: rgb(231, 235, 238);
+  }
+  .boxshadow{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  .resize{
+    resize: none;
+ 
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Blur effect for Safari */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .container {
+      grid-auto-rows: auto; /* fixed height for rows */
+
+  }
