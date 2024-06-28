@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 export default function AssingmenthtmlhtmlForm() {
   const {
@@ -31,6 +32,7 @@ export default function AssingmenthtmlhtmlForm() {
         setLoading(false);
         reset();
         router.push("/");
+        toast.success("Assignment created Successfully.")
       }
     } catch (error) {
       console.log(error);

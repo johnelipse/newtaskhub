@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
-import { Toaster } from "@/components/ui/toaster";
+// import { Toaster } from "@/components/ui/toaster";
+import toast, { Toaster } from 'react-hot-toast';
 import "@uploadthing/react/styles.css";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
@@ -39,8 +40,12 @@ export default function RootLayout({
            */
           routerConfig={extractRouterConfig(ourFileRouter)}
         /> 
+<div>        <Toaster
+  position="top-right"
+  reverseOrder={false}
+/></div>
           <main>{children}</main>
-        <Toaster/>
+        
           </ThemeProvider></body>
     </html>
   );
