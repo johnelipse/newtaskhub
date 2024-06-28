@@ -16,7 +16,7 @@ export default async function Page() {
       <div>
         <Header />
         <div className="lg:flex md:block block lg:px-[6rem] md:px-4 sm:px-2 ">
-          <nav className="w-[30%] h-full bg-[rgb(231, 235, 238);] px-5 py-3 fixed lg:block md:hidden hidden left-0 top-[10%]">
+          <nav className="w-[20%] h-full bg-[rgb(231, 235, 238);] px-5 py-3 fixed lg:block md:hidden hidden left-0 top-[10%]">
             <AccordionDemo />
             <div className="mt-8">
               <h3 className="mb-4 mt-4 font-bold ">Services at DesisHub</h3>
@@ -50,7 +50,7 @@ export default async function Page() {
             <Link href="https://www.tiktok.com/@desishubcoddingschool?lang=en"><FaTiktok className="text-blue-700 hover:text-green-600 dark:text-green-500 dark:hover:text-blue-700"/></Link>
             </div>
           </nav>
-          <div className="lg:w-[70%] md:w-full w-full lg:ml-[25rem] pb-7 mt-[5rem] px-3 md:ml-0 ml-0">
+          <div className="lg:w-[80%] md:w-full w-full lg:ml-[13rem] pb-7 mt-[5rem] px-3 md:ml-0 ml-0">
             <h3 className="mb-4 text-[1.5rem] font-bold">
               All Assignments in Hand
             </h3>
