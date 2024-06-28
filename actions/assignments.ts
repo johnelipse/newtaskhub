@@ -36,12 +36,4 @@ try {
 }
 }
 
-export async function getSingleAssignment({params:{id}}:any){
-try {
-  const singleAssignment = await db.assignment.findUnique(id)
-  console.log(singleAssignment)
-  return singleAssignment
-} catch (error) {
- console.log(error) 
-}
-}
+

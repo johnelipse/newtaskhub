@@ -12,7 +12,7 @@ import Link from "next/link"
         <AccordionItem value="item-1">
           <AccordionTrigger>Created websites</AccordionTrigger>
           <AccordionContent>
-            <Link href="/">Desishub Docs</Link>
+            <Link href="https://desishub-docs.vercel.app/">Desishub Docs</Link>
           </AccordionContent>
           <AccordionContent>
             <Link href="/">Inventory System</Link>
