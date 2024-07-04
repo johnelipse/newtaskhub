@@ -4,9 +4,10 @@ import React from "react";
 import gettingAllAssignments from "@/app/controllers/gettingAllAssignments";
 import { getAllAssignments } from "@/actions/assignments";
 import { AssignmentProps } from "@/types/type";
+import { Assignment } from "@prisma/client";
 
 export default async function Assignments() {
-  const assignments:AssignmentProps[] = (await getAllAssignments()) || [];
+  const assignments: AssignmentProps[] | any[] = (await getAllAssignments()) || [];
 
   return (
     <div>
