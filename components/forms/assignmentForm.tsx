@@ -53,7 +53,7 @@ export default function AssignmentForm() {
         <div>
           <label
             htmlFor="title"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
           >
             Assignment Title
           </label>
@@ -72,7 +72,7 @@ export default function AssignmentForm() {
         <div>
           <label
             htmlFor="link"
-            className="block text-sm font-medium leading-6 text-gray-900"
+            className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
           >
             Assignment Link
           </label>
@@ -89,7 +89,7 @@ export default function AssignmentForm() {
           <div className="flex items-center justify-between">
             <label
               htmlFor="description"
-              className="block text-sm font-medium leading-6 text-gray-900"
+              className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
             >
               Assignment Description
             </label>
