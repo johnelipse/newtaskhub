@@ -12,4 +12,6 @@ export type AssignmentProps ={
      imageUrl: any,
      link: any,
      slug: string,
+     createdAt: string  
+
 }

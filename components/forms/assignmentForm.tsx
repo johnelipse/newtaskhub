@@ -3,14 +3,15 @@
 import { createAssignment } from "@/actions/assignments";
 import { UploadButton, UploadDropzone } from "@/lib/uploadthing";
 import { AssignmentProps } from "@/types/type";
+import { Assignment } from "@prisma/client";
 import { Loader } from "lucide-react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 
-export default function AssingmenthtmlhtmlForm() {
+export default function AssignmentForm() {
   const {
     register,
     handleSubmit,
@@ -20,25 +21,32 @@ export default function AssingmenthtmlhtmlForm() {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState("/placeholder.svg");
   const router = useRouter();
+
+
+
   async function submitData(data: AssignmentProps) {
     setLoading(true);
     const slug = data.title.trim().split(" ").join("-").toLowerCase();
     data.slug = slug;
     data.imageUrl = imageUrl;
+    
+
     console.log(data);
+
     try {
       const res = await createAssignment(data);
       if (res.success) {
         setLoading(false);
         reset();
         router.push("/");
-        toast.success("Assignment created Successfully.")
+        toast.success("Assignment created successfully.");
       }
     } catch (error) {
       console.log(error);
       setLoading(false);
     }
   }
+
   return (
     <div className="max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       <form className="space-y-2" onSubmit={handleSubmit(submitData)}>
@@ -66,7 +74,7 @@ export default function AssingmenthtmlhtmlForm() {
             htmlFor="link"
             className="block text-sm font-medium leading-6 text-gray-900"
           >
-            Assignment link
+            Assignment Link
           </label>
           <div className="mt-2">
             <input
@@ -75,10 +83,8 @@ export default function AssingmenthtmlhtmlForm() {
               {...register("link")}
               className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
             />
-            
           </div>
         </div>
-
         <div>
           <div className="flex items-center justify-between">
             <label
@@ -97,7 +103,7 @@ export default function AssingmenthtmlhtmlForm() {
               defaultValue={""}
             />
             {errors.description && (
-              <span className="text-red-500">description is required</span>
+              <span className="text-red-500">Description is required</span>
             )}
           </div>
         </div>
@@ -113,7 +119,7 @@ export default function AssingmenthtmlhtmlForm() {
             endpoint="assignmentImage"
             onClientUploadComplete={(res) => {
               // Do something with the response
-              console.log("Files: ", res);
+              console.log("Files:", res);
               setImageUrl(res[0].url);
               alert("Upload Completed");
             }}
