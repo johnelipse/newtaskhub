@@ -48,12 +48,12 @@ export default function AssignmentForm() {
   }
 
   return (
-    <div className="max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="max-w-sm mx-auto p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-white dark:border-gray-700">
       <form className="space-y-2" onSubmit={handleSubmit(submitData)}>
         <div>
           <label
             htmlFor="title"
-            className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
+            className="block text-sm font-medium leading-6 text-gray-900 dark:text-black"
           >
             Assignment Title
           </label>
@@ -72,7 +72,7 @@ export default function AssignmentForm() {
         <div>
           <label
             htmlFor="link"
-            className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
+            className="block text-sm font-medium leading-6 text-gray-900 dark:text-black"
           >
             Assignment Link
           </label>
@@ -89,7 +89,7 @@ export default function AssignmentForm() {
           <div className="flex items-center justify-between">
             <label
               htmlFor="description"
-              className="block text-sm font-medium leading-6 text-gray-900 dark:text-white"
+              className="block text-sm font-medium leading-6 text-gray-900 dark:text-black"
             >
               Assignment Description
             </label>

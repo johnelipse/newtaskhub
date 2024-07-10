@@ -37,3 +37,26 @@
     flex-direction: column;
   }
 }
+
+.unique{
+  animation: rotate infinite;
+}
+
+@keyframes rotate{
+ 0%{
+  color: green;
+ }
+ 50%{
+  color: red;
+ }
+ 100%{
+  color: yellow;
+ }
+}
+@media(max-width:368px){
+  .fire{
+    position: fixed;
+    top: 33%;
+    left:44%;
+  }
+}
