@@ -31,3 +31,9 @@
       grid-auto-rows: auto; /* fixed height for rows */
 
   }
+
+@media(max-width:577px){
+  .small{
+    flex-direction: column;
+  }
+}
