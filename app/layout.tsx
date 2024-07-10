@@ -45,7 +45,6 @@ export default function RootLayout({
   position="top-right"
   reverseOrder={false}
 /></div>
-
           <main>
             {children}</main>
         
